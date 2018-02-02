@@ -1,0 +1,19 @@
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['gauge']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Label', 'Value'],
+          {{ section['table_data'] }}
+
+        ]);
+
+        var options = {{ section['options'] }} ;
+
+        var chart = new google.visualization.Gauge(document.getElementById('{{ section['title'] }}'));
+        chart.draw(data, options);
+
+      }
+    </script>
+    <div id="{{ section['title'] }}" style="width: 400px; height: 120px;"></div>

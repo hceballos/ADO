@@ -1,0 +1,58 @@
+<div class="section">
+    <div class="container">
+	<div class="table-responsive">
+	<h4>{{ section['title'] }}</h4>
+    </div>
+    </div>
+
+	<div class="content">
+		<script type="text/javascript">
+	        google.charts.load('current', {packages: ['corechart', 'line']});
+	        google.charts.setOnLoadCallback(drawCurveTypes);
+
+	        function drawCurveTypes(){
+	            var data = new google.visualization.DataTable();
+	            data.addColumn('string', 'X');
+	            {% for line in section['graph_data']['lines'] %}
+	            	data.addColumn('number', '{{ line["name"] }}');
+	            {% endfor %}
+
+	            data.addRows([
+	            	{% for label in section['graph_data']['labels'] %}
+	            	{% set label_loop = loop %}
+			            [
+			            	"{{ label }}",
+			            	{% for line in section['graph_data']['lines'] %}
+			            		{{ line['data'][label_loop.index0] }},
+			            	{% endfor %}
+			            ],
+			        {% endfor %}
+			    ]);
+
+
+	            var options = {
+	                hAxis: {
+	                    title: "{{ section['graph_data']['haxis'] }}"
+	                },
+	                vAxis: {
+	                    title: "{{ section['graph_data']['vaxis'] }}"
+	                },
+	                series: {
+	                    1: {curveType: 'function'}
+	                }
+	            };
+
+	            var chart = new google.visualization.ColumnChart(document.getElementById("{{ section['title'] }}"));
+	            chart.draw(data, options);
+	        }
+	    </script>
+
+<div class="section">
+	    <div class="table-responsive">
+	    	<div id="{{ section['title'] }}"></div>
+		</div>
+</div>
+
+	</div>
+</div>
+

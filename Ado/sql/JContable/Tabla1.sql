@@ -1,0 +1,1 @@
+SELECT lower(descripcion), lower(nombre) as NOMBRE, fecha, N_comprobante as VOUCHER, debe as CARGOS, haber as ABONOS FROM MovimientosTabla INNER JOIN complemento ON MovimientosTabla.AUXILIAR = complemento.rut WHERE cuenta=? GROUP BY fecha HAVING fecha between '01-01-2014' and date('now') ORDER BY fecha desc LIMIT 10

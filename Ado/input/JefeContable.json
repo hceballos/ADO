@@ -1,0 +1,158 @@
+[
+    {
+        "tipo": "tabla",
+        "nombre": "Nombre",
+        "sql_file_path":{
+            "activo" :      "sql/JContable/NombreCuenta.sql",
+            "pasivo" :      "sql/JContable/NombreCuenta.sql",
+            "patrimonio" :  "sql/JContable/NombreCuenta.sql",
+            "ingresos" :    "sql/JContable/NombreCuenta.sql",
+            "egresos" :     "sql/JContable/NombreCuenta.sql",
+            "impuestos" :   "sql/JContable/NombreCuenta.sql",
+            "derechos" :    "sql/JContable/NombreCuenta.sql",
+            "responsabilidad" : "sql/JContable/NombreCuenta.sql",
+            "orden" :       "sql/JContable/NombreCuenta.sql"
+        }
+    },
+    {
+        "tipo": "tabla",
+        "nombre": "Numero",
+        "sql_file_path":{
+            "activo" : "sql/JContable/NumeroCuenta.sql",
+            "pasivo" : "sql/JContable/NumeroCuenta.sql",
+            "patrimonio" : "sql/JContable/NumeroCuenta.sql",
+            "ingresos" : "sql/JContable/NumeroCuenta.sql",
+            "egresos" : "sql/JContable/NumeroCuenta.sql",
+            "impuestos" : "sql/JContable/NumeroCuenta.sql",
+            "derechos" : "sql/JContable/NumeroCuenta.sql",
+            "responsabilidad" : "sql/JContable/NumeroCuenta.sql",
+            "orden" : "sql/JContable/NumeroCuenta.sql"
+        }
+    },
+    {
+        "tipo": "tabla",
+        "nombre": "Saldo",
+        "sql_file_path":{
+            "activo" : "sql/JContable/SaldoCuentaActivo.sql",
+            "pasivo" : "sql/JContable/SaldoCuentaPasivo.sql",
+            "patrimonio" : "sql/JContable/SaldoCuentaPatrimonio.sql",
+            "ingresos" : "sql/JContable/SaldoCuentaIngresos.sql",
+            "egresos" : "sql/JContable/SaldoCuentaEgresos.sql",
+            "impuestos" : "sql/JContable/SaldoCuentaImpuestos.sql",
+            "derechos" : "sql/JContable/SaldoCuentaDerechos.sql",
+            "responsabilidad" : "sql/JContable/SaldoCuentaResponsabilidad.sql",
+            "orden" : "sql/JContable/SaldoCuentaOrden.sql"
+        }
+    },
+    {
+        "tipo": "tabla",
+        "nombre": "Ultimos 5 periodos",
+        "sql_file_path":{
+            "activo" :  "sql/JContable/Ultimos5aniosActivo.sql",
+            "pasivo" :  "sql/JContable/Ultimos5aniosPasivo.sql",
+            "patrimonio" : "sql/JContable/Ultimos5aniosPatrimonio.sql",
+            "ingresos" : "sql/JContable/Ultimos5aniosIngresos.sql",
+            "egresos" : "sql/JContable/Ultimos5aniosEgresos.sql",
+            "impuestos" : "sql/JContable/Ultimos5aniosImpuestos.sql",
+            "derechos" : "sql/JContable/Ultimos5aniosDerechos.sql",
+            "responsabilidad" : "sql/JContable/Ultimos5aniosResponsabilidad.sql",
+            "orden" : "sql/JContable/Ultimos5aniosOrden.sql"
+        }
+    },
+    {
+        "tipo": "grafico",
+        "nombre": "Serie de Tiempo",
+        "haxis": "Meses",
+        "vaxis": "Pesos",
+        "lineas": [
+            {
+                "nombre": "2016",
+                "sql_file_path":{
+                    "activo" :  "sql/JContable/SaldoAnteriorActivo.sql",
+                    "pasivo" :  "sql/JContable/SaldoAnteriorPasivo.sql",
+                    "patrimonio" : "sql/JContable/SaldoAnteriorPatrimonio.sql",
+                    "ingresos" : "sql/JContable/SaldoAnteriorIngresos.sql",
+                    "egresos" : "sql/JContable/SaldoAnteriorEgresos.sql",
+                    "impuestos" : "sql/JContable/SaldoAnteriorImpuestos.sql",
+                    "derechos" : "sql/JContable/SaldoAnteriorDerechos.sql",
+                    "responsabilidad" : "sql/JContable/SaldoAnteriorResponsabilidad.sql",
+                    "orden" : "sql/JContable/SaldoAnteriorOrden.sql"
+                }
+            },
+            {
+                "nombre": "2017",
+                "sql_file_path":{
+                    "activo" :  "sql/JContable/SaldoActualActivo.sql",
+                    "pasivo" :  "sql/JContable/SaldoActualPasivo.sql",
+                    "patrimonio" : "sql/JContable/SaldoActualPatrimonio.sql",
+                    "ingresos" : "sql/JContable/SaldoActualIngresos.sql",
+                    "egresos" : "sql/JContable/SaldoActualEgresos.sql",
+                    "impuestos" : "sql/JContable/SaldoActualImpuestos.sql",
+                    "derechos" : "sql/JContable/SaldoActualDerechos.sql",
+                    "responsabilidad" : "sql/JContable/SaldoActualResponsabilidad.sql",
+                    "orden" : "sql/JContable/SaldoActualOrden.sql"
+                }
+            }
+        ]
+    },
+    {
+        "tipo": "tabla",
+        "nombre": "Ultimos 10 movimientos",
+        "sql_file_path":{
+            "activo" : "sql/JContable/Ultimos10Movimientos.sql",
+            "pasivo" : "sql/JContable/Ultimos10Movimientos.sql",
+            "patrimonio" : "sql/JContable/Ultimos10Movimientos.sql",
+            "ingresos" : "sql/JContable/Ultimos10Movimientos.sql",
+            "egresos" : "sql/JContable/Ultimos10Movimientos.sql",
+            "impuestos" : "sql/JContable/Ultimos10Movimientos.sql",
+            "derechos" : "sql/JContable/Ultimos10Movimientos.sql",
+            "responsabilidad" : "sql/JContable/Ultimos10Movimientos.sql",
+            "orden" : "sql/JContable/Ultimos10Movimientos.sql"
+        }
+    },
+    {
+        "tipo": "tabla",
+        "nombre": "Ruts Componen Saldo",
+        "sql_file_path":{
+            "activo" : "sql/JContable/RutsComponenSaldo.sql",
+            "pasivo" : "sql/JContable/RutsComponenSaldo.sql",
+            "patrimonio" : "sql/JContable/RutsComponenSaldo.sql",
+            "ingresos" : "sql/JContable/RutsComponenSaldo.sql",
+            "egresos" : "sql/JContable/RutsComponenSaldo.sql",
+            "impuestos" : "sql/JContable/RutsComponenSaldo.sql",
+            "derechos" : "sql/JContable/RutsComponenSaldo.sql",
+            "responsabilidad" : "sql/JContable/RutsComponenSaldo.sql",
+            "orden" : "sql/JContable/RutsComponenSaldo.sql"
+        }
+    },
+    {
+        "tipo": "tabla",
+        "nombre": "Ruts en contra de su naturaleza",
+        "sql_file_path":{
+            "activo" : "sql/JContable/ContraNatuzaleza.sql",
+            "pasivo" : "sql/JContable/ContraNatuzaleza.sql",
+            "patrimonio" : "sql/JContable/ContraNatuzaleza.sql",
+            "ingresos" : "sql/JContable/ContraNatuzaleza.sql",
+            "egresos" : "sql/JContable/ContraNatuzaleza.sql",
+            "impuestos" : "sql/JContable/ContraNatuzaleza.sql",
+            "derechos" : "sql/JContable/ContraNatuzaleza.sql",
+            "responsabilidad" : "sql/JContable/ContraNatuzaleza.sql",
+            "orden" : "sql/JContable/ContraNatuzaleza.sql"
+        }
+    },
+    {
+        "tipo": "tabla",
+        "nombre": "Centro de costos",
+        "sql_file_path":{
+            "activo" : "sql/JContable/CentroCostos.sql",
+            "pasivo" : "sql/JContable/CentroCostos.sql",
+            "patrimonio" : "sql/JContable/CentroCostos.sql",
+            "ingresos" : "sql/JContable/CentroCostos.sql",
+            "egresos" : "sql/JContable/CentroCostos.sql",
+            "impuestos" : "sql/JContable/CentroCostos.sql",
+            "derechos" : "sql/JContable/CentroCostos.sql",
+            "responsabilidad" : "sql/JContable/CentroCostos.sql",
+            "orden" : "sql/JContable/CentroCostos.sql"
+        }
+  }
+]

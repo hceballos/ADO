@@ -1,0 +1,14 @@
+{% import 'includes/table.html' as table %}
+<div class="section">
+    <div class="container">
+        <div class="table-responsive">
+    	   <!---'title': u'Caja_Chica' -->
+    	   <h4>{{ section['title'] }}</h4>
+        </div>
+    </div>
+
+
+	<div class="container">
+	{{ table.create_table(section['table_data']) }}
+	</div>
+</div>

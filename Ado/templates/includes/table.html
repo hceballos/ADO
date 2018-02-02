@@ -1,0 +1,22 @@
+        <!---funcion create_table y le paso los datos de 'table_data' en section-->
+        {% macro create_table(table_data) %}
+
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover table-condensed">
+                <tr class="info">
+                    {% for column in table_data[0] %}
+                    <td>{{ column }}</td>
+                    {% endfor %}
+                </tr>
+
+                {% for row in table_data[1:] %}
+                <tr>
+                    {% for column in row %}
+                    <th>{{ column }}</th>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+
+        {% endmacro %}

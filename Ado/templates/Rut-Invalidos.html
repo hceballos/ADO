@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="estilos.css">
+        <script language="JavaScript">
+            function Fecha()
+                {
+                meses = new Array("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
+                data = new Date();
+                index = data.getMonth();
+                diasemana=new Array("Lunes","Martes","Miercoles","Jueves","Viernes","Sabado","Domingo");
+                indexday =  data.getDay();
+                if (indexday == 0)
+                indexday = 7;
+                any = data.getYear();
+                if (any < 1900)
+                    any = 1900 + any;
+                document.write(diasemana[indexday-1]+ "," + ' '+data.getDate()+ " de " + meses[index] + " de " + any);
+                }
+        </script>
+        <style type="text/css">
+            header {
+                background:#2c3e50;
+                color:#fff;
+            }
+
+            body {
+                background:#F7F7F7;
+                width: 100%;
+            }
+
+            table {
+                background: white;
+                width: 100%;
+            }
+
+            td {
+              text-align: center;
+            }
+
+            th {
+              text-align: left;
+            }
+        </style>
+
+    </head>
+    <body>
+        <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="page-header">
+                        <h3 align="right" >Gerente Finanzas<small> Situaciones problematicas</small></h3>
+                        <h5 align="right"><script language="javascript">Fecha()</script></h5>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        </header>
+
+        {% for section in data %}
+            {% if section['type'] == "tabla" %}
+                {% include 'includes/section_tabla.html' %}
+            {% elif section['type'] == "grafico" %}
+                {% include 'includes/section_grafico.html' %}
+            {% elif section['type'] == "gauge" %}
+                {% include 'includes/section_gauge.html' %}
+            {% endif %}
+        {% endfor %}
+
+
+
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+        <script> $("th:contains('None')").css("color", "white"); </script>
+
+        <script type="text/javascript">
+        $("th").filter(function(){
+            return parseInt($(this).text()) < 0
+            }).css("color", "red");
+
+
+
+
+
+        </script>
+
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+    </body>
+</html>
+
+
+<!--- DATA: {{ data }} -->

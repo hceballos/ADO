@@ -1,0 +1,7 @@
+[
+  {
+	"tipo": "tabla",
+    "nombre": "Rut Invalido",
+    "sql_file_path": "sql/invalidos.sql"
+  }
+]
